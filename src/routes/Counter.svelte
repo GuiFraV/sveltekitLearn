@@ -15,6 +15,8 @@
 		// handle negative numbers
 		return ((n % m) + m) % m;
 	}
+
+	const fruitList: Array<string> = [ "pomme", "poire", "orange", "banane"];
 </script>
 
 
@@ -26,6 +28,13 @@
 {:else}
 	<p>Le chiffre est impair</p>
 {/if}
+
+<ul>
+
+	{#each fruitList as fruit}
+		<li>{fruit}</li>
+	{/each}
+</ul>
 
 <div class="counter">
 	<button on:click={() => (count -= 1)} aria-label="Decrease the counter by one">

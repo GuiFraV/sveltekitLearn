@@ -3,6 +3,16 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
+<script lang="ts">
+	import Fizzbuzz from "$lib/Fizzbuzz.svelte";
+	const numberList = [5,6,468,28,63,8,8]
+</script>
+
+
+<Fizzbuzz numberList={numberList}>
+    <p>Hello About Fizz</p>
+</Fizzbuzz>
+
 <div class="text-column">
 	<h1>About this app</h1>
 

@@ -3,6 +3,10 @@
 
 	let count = 0;
 
+	$:double = count * 2;
+
+	$:isOdd = count % 2 === 0; 
+
 	const displayed_count = spring();
 	$: displayed_count.set(count);
 	$: offset = modulo($displayed_count, 1);
@@ -12,6 +16,16 @@
 		return ((n % m) + m) % m;
 	}
 </script>
+
+
+{count}
+{double}
+
+{#if isOdd}
+	<p>Le chiffre est pair</p>
+{:else}
+	<p>Le chiffre est impair</p>
+{/if}
 
 <div class="counter">
 	<button on:click={() => (count -= 1)} aria-label="Decrease the counter by one">

@@ -31,8 +31,8 @@
 
 <ul>
 
-	{#each fruitList as fruit}
-		<li>{fruit}</li>
+	{#each fruitList as fruit, index}
+		<li> {index + 1} {fruit}</li>
 	{/each}
 </ul>
 
